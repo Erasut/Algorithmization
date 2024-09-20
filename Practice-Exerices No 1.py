@@ -32,8 +32,8 @@ print(path)
 path="C:\\Users\\MainAdmin\\Dekstop\\files\\picture.exe"
 print(path)
 
-path="C:\\Games\\city simulator"
-print(path*2)
+path="C:\\Games\\city simulator" * 2
+print(path)
 print("Errror path:", path*2)
 
 #Задание 3
