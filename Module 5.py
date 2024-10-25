@@ -15,6 +15,7 @@ elif summa >= 1000 and summa <= 5000:
     print("Скидка 5%", summa * 0,05)
 else:
     print(summa * 0.1)
+
 #Задание 3
 a = int(input("Введите первое число"))
 b = int(input("Введите второе число"))
@@ -44,6 +45,7 @@ if a != x:
     print("Доступ запрещён")
 else:
     print("Доступ разрешён")
+
 #Задание 6
 coordinate = coordinate.upper()
 if coordinate in squares:
@@ -56,6 +58,7 @@ if coordinate in squares:
         return "В данном квадрате никто не сидит."
 else:
     return "Некорректные координаты."
+
 #Задание 7
 n = int(input("Введите число n: "))
 k = int(input("Введите число k: "))
@@ -77,5 +80,15 @@ elif health <20:
 else:
     print("Некорректные данные.")
 
+#Задание 9
+inventory = ["яблоко", "шариковая ручкая"]
+if "ключ" in inventory and "фонарь" in inventory:
+    print("Вы можете пройти через дверь.")
+elif "ключ" not in inventory:
+    print("У вас нет ключа, вы не можете открыть дверь")
+elif "фонарь" not in inventory:
+    print("У вас нет фонаря, слишком темно, чтобы пройти")
+else:
+    print("У вас нет ни ключа, ни фонаря, вы не можете пройти через дверь.")
 
 
