@@ -73,3 +73,27 @@ while True:
         num = int(input("Введите число от 1 до 9: "))
         if 1 <= num <= 9:
             break
+        else:
+            print("Число вне диапазона. Пожалуйста, попробуйте снова.")
+    except ValueError:
+        print("Некорректный ввод. Пожалуйста, введите целое число.")
+print(f"Таблица умножения для числа {num}:")
+for x in range(1, 11):
+    res = num * x
+    print(f"{num} x {x} = {res}")
+
+#Задание 10
+secret_answer = "слон"
+attempts = 3
+print("Загадка: Я большой и серый, у меня длинный хобот. Кто я?")
+while attempts > 0:
+    answer = input(
+        "Ваш ответ: ").strip().lower()
+    if answer == secret_answer:
+        print("Поздравляем! Вы угадали!")
+        break
+    else:
+        attempts -= 1
+        print(f"Неправильный ответ. У вас осталось {attempts} попыток.")
+if attempts == 0:
+    print("Все попытки исчерпаны. Загадка осталась неразгаданной.")
