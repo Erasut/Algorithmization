@@ -20,7 +20,7 @@ switch_check(switch_2)
 switch_check(switch_3)
 
 #Задание 3
-def triangle_type(side1: float, side2: float, side3: float) -> None:
+def triangle_type(side1: float, side2: float, side3: float):
     if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1):
         if side1 == side2 == side3:
             print("Равносторонний треугольник")
