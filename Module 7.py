@@ -19,7 +19,7 @@ switch_check(switch_1)
 switch_check(switch_2)
 switch_check(switch_3)
 
-#Задание 3
+#Задание 3.1
 def triangle_type(side1: float, side2: float, side3: float):
     if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1):
         if side1 == side2 == side3:
@@ -34,3 +34,5 @@ triangle_type(3, 3, 3)
 triangle_type(5, 5, 8)
 triangle_type(3, 4, 5)
 triangle_type(1, 2, 3)
+
+#Задание 3.2
