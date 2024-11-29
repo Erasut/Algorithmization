@@ -36,3 +36,18 @@ triangle_type(3, 4, 5)
 triangle_type(1, 2, 3)
 
 #Задание 3.2
+import math
+def triangle(a, b, c):
+    print("Длина сторон треугольника:", a, b, c, "\nИнформация:")
+    if a + b <= c or a + c <= b or c + b <= a:
+        print("Некорректные стороны. Невозможно построить треугольник.")
+    elif a != b and a != c and b != c:
+        print("Разносторонний треугольник")
+    elif a == b or a == c or b == c:
+        print("Равнобедренный треугольник")
+    elif a == b == c:
+        print("Равносторонний треугольник")
+    p = (a + b + c)
+    s = p / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    print(f"Площадь: {int(s)}\nПериметр: {round(area, 2)}")
