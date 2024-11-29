@@ -51,3 +51,16 @@ def triangle(a, b, c):
     s = p / 2
     area = math.sqrt(s * (s - a) * (s - b) * (s - c))
     print(f"Площадь: {int(s)}\nПериметр: {round(area, 2)}")
+
+#Задание 4 
+def number_change(input_number, output_number):
+    steps = 0 
+    while input_number != output_number:
+        if input_number < output_number:
+            input_number += 1  
+        elif input_number > output_number:
+            input_number -= 1 
+        steps += 1 
+    return steps, input_number, output_number
+result = number_change(5, 10)
+print(result) 
