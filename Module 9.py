@@ -1,3 +1,4 @@
+#Задание 1
 class Pers():
     def __init__(self, name, klass, hp, damage):
         self.name = name
