@@ -186,3 +186,81 @@ print(f"Тематика комнаты {room1.name}: {room1.show_theme()}")
 
 room1.lock_room()
 room1.add_item("Микроволновка")
+---------------------------------------------------------------------------------------------------
+#Задание 3
+class Car:
+    def __init__(self, brand, model, km, year):
+        self.brand = brand
+        self.model = model
+        self.km = km
+        self.year = year
+
+    def show_info(self):
+        print(f"Автомобиль: {self.brand} {self.model}, Год выпуска: {self.year}, Пробег: {self.km} км")
+
+    def update_mileage(self, new_km):
+        if new_km >= self.km:
+            self.km = new_km
+            print(f"Пробег обновлен до {self.km} км")
+        else:
+            print("Ошибка: Новый пробег не может быть меньше текущего.")
+
+    def is_new(self):
+        if self.km < 10000:
+            print("Это новый автомобиль.")
+        else:
+            print("Это не новый автомобиль.")
+
+    def update_km(self, param):
+        pass
+
+
+car1 = Car("Toyota", "Corolla", 5000, 2020)
+car2 = Car("Ford", "Mustang", 15000, 2018)
+
+car1.show_info()
+car1.update_km(6000)
+car1.is_new()
+
+car2.show_info()
+car2.update_km(14000)
+car2.is_new()
+
+class Phone:
+    def __init__(self, brand, model, battery_capacity, charge):
+        self.brand = brand
+        self.model = model
+        self.battery_capacity = battery_capacity
+        self.charge = charge
+
+    def charge_phone(self, amount):
+        if amount > 0:
+            self.charge = min(self.charge + amount, self.battery_capacity)
+            print(f"Телефон заряжен до {self.charge} мАч")
+        else:
+            print("Ошибка: Количество заряда должно быть положительным.")
+
+    def spend_charge(self, amount):
+        if amount > 0:
+            self.charge = max(self.charge - amount, 0)
+            print(f"Заряд телефона уменьшен до {self.charge} мАч")
+        else:
+            print("Ошибка: Количество потраченного заряда должно быть положительным.")
+
+    def is_discharged(self):
+        if self.charge == 0:
+            print("Телефон разряжен.")
+        else:
+            print(f"Телефон заряжен. Текущий заряд: {self.charge} мАч")
+
+
+phone1 = Phone("Samsung", "Galaxy S21", 4000, 2000)
+phone2 = Phone("Apple", "iPhone 12", 3000, 3000)
+
+phone1.charge_phone(1000)
+phone1.spend_charge(500)
+phone1.is_discharged()
+
+phone2.charge_phone(-100)
+phone2.spend_charge(3500)
+phone2.is_discharged()
