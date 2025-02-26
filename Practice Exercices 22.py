@@ -25,5 +25,5 @@ class Hotel:
             self.rooms[room_number] = True
             print(f"Бронь номера {room_number} успешно снята.")
 
-hotel = Hotel("ОТель: У Егора")
+hotel = Hotel("Отель: У Палыча")
 hotel.print_rooms() 
