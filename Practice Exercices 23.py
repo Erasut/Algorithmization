@@ -1,5 +1,4 @@
 class User:
-    """Базовый класс пользователя"""
     def __init__(self, username, email, role="user"):
         self.username = username
         self.email = email
